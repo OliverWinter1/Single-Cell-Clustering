@@ -1,4 +1,4 @@
-# Single-Cell-Clustering
+# Single Cell Clustering Project
 
 ## Project overview
 This project is a single-cell RNA-seq analysis workflow using Scanpy and Anndata
@@ -23,3 +23,21 @@ The loaded dataset contained:
 - normalised expression values stored in adata.layers["normalized"]
 
 The normalised expression layer was assigned to adata.X for downstream Scanpy analysis.
+
+## Workflow
+
+The scanpy workflow went as followed
+
+-Load the libraries and Anndata object
+-Inspect the obs (cell metadata)
+-Inspect the var (gene metadata)
+-Assign normalised matrix to adata.X
+-Undergo quality control
+-Select HVG (Highly Variables Genes)
+-Undergo feature selection and PCA
+-Construct nearest neighbor plots
+-Generate UMAP plot
+-Perform clustering
+-Reasses quality control and remove error cells
+-Rerun PCA, neighbours, UMAP, and clustering
+-Perform marker gene analysis and annotate clusters
