@@ -51,11 +51,11 @@ The normalised expression layer was assigned to adata.X for downstream Scanpy an
 - Known PBMC marker genes found in the dictionary were used to label cell clusters with a tentative cell type
 
 - The dictionary used is shown below:
-Monocytes: `LYZ`, `S100A8`, `S100A9`, `FCN1`, `CD14`, `FCGR3A`
-B cells: `MS4A1`, `CD79A`, `CD79B`, `IGHD`, `IGHM`
-T cells: `CD3D`, `CD3E`, `TRAC`, `IL7R`
-CD8/NK cells: `NKG7`, `GNLY`, `GZMA`, `GZMB`, `CCL5`
-pDCs: `IL3RA`, `TCF4`, `PLD4`
+- Monocytes: `LYZ`, `S100A8`, `S100A9`, `FCN1`, `CD14`, `FCGR3A`
+- B cells: `MS4A1`, `CD79A`, `CD79B`, `IGHD`, `IGHM`
+- T cells: `CD3D`, `CD3E`, `TRAC`, `IL7R`
+- CD8/NK cells: `NKG7`, `GNLY`, `GZMA`, `GZMB`, `CCL5`
+- pDCs: `IL3RA`, `TCF4`, `PLD4`
 
 ## Results
 
