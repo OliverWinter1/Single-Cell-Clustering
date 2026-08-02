@@ -24,30 +24,27 @@ The loaded dataset contained:
 
 The normalised expression layer was assigned to adata.X for downstream Scanpy analysis.
 
-## Workflow
-
-The scanpy workflow went as followed:
-
-### Load the libraries and Anndata object
-### Inspect the obs (cell metadata)
-### Inspect the var (gene metadata)
-### Assign normalised matrix to adata.X
-### Undergo quality control
-### Select HVG (Highly Variables Genes)
+## Workflow:
+### -Load the libraries and Anndata object
+### -Inspect the obs (cell metadata)
+### -Inspect the var (gene metadata)
+### -Assign normalised matrix to adata.X
+### -Undergo quality control
+### -Select HVG (Highly Variables Genes)
 - We used the top 1000 genes that varied the most between cells
 - This provided us with smaller dimensionality whilst allowing for the most influencial genes to be used in neighboring/clustering
-### Undergo feature selection and PCA
+### -Undergo feature selection and PCA
 - PCA was used to further reduce dimensionality
 - 50 PCA components capture major patterns in variation
-### Construct nearest neighbor plots
+### -Construct nearest neighbor plots
 - Built using the PCA representation of the data
 - It connects cells with similar gene expression profiles and maps them close together
-### Generate UMAP plot
-### Perform clustering
+### -Generate UMAP plot
+### -Perform clustering
 - We used Leiden clustering to group transcriptionaly similar cells
-### Reasses quality control and remove error cells
-### Rerun PCA, neighbours, UMAP, and clustering
-### Perform marker gene analysis and annotate clusters
+### -Reasses quality control and remove error cells
+### -Rerun PCA, neighbours, UMAP, and clustering
+### -Perform marker gene analysis and annotate clusters
 
 ## Results
 
