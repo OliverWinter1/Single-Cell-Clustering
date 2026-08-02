@@ -43,8 +43,19 @@ The normalised expression layer was assigned to adata.X for downstream Scanpy an
 #### -Perform clustering
 - We used Leiden clustering to group transcriptionaly similar cells
 #### -Reasses quality control and remove error cells
+- Quality control metrics were reassessed after clustering to identify possible error clusters.
+- Clusters 2 and 9 were removed because they showed unusually high n_counts, suggesting they may represent error cells or possible doublets (where 2 cells have grouped together)
 #### -Rerun PCA, neighbours, UMAP, and clustering
 #### -Perform marker gene analysis and annotate clusters
+- The most common genes found in each cluster were identified 
+- Known PBMC marker genes found in the dictionary were used to label cell clusters with a tentative cell type
+
+- The dictionary used is shown below:
+- Monocytes: `LYZ`, `S100A8`, `S100A9`, `FCN1`, `CD14`, `FCGR3A`
+- B cells: `MS4A1`, `CD79A`, `CD79B`, `IGHD`, `IGHM`
+- T cells: `CD3D`, `CD3E`, `TRAC`, `IL7R`
+- CD8/NK cells: `NKG7`, `GNLY`, `GZMA`, `GZMB`, `CCL5`
+- pDCs: `IL3RA`, `TCF4`, `PLD4`
 
 ## Results
 
