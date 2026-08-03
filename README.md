@@ -79,12 +79,41 @@ A new Leiden clustering profile with the new filtered cells
 ### Figure 10
 The plots show the top 5 genes and their contribution towards each clusters variance profile
 ### Figure 11
-The dotplot uses a PBMC marker gene dictionary to allow interpretation of which genes correlate to which cell type
+The dotplot uses a PBMC marker gene dictionary to allow interpretation of which genes correlate to which cell type. It shows what proportion of cells in the cluster express each of the key marker genes from the dictionary.
 ### Figure 12
 The Leiden Clusters at 0.3 resolution fully labelled with the cell types the cluster represents
-### Figure
-### Figure
-### Figure
 
 ## Results
+### Cluster 0
+Cluster 0 was labelled as monocytes and this is likely to be the case. The 3 most prevalent genes expressed within the cell population ("LYZ", "S100A8", "S100A9") all appear in the marker gene dictionary under monocyte labelling. 
+### Cluster 1
+Cluster 1 was also labelled as monocytes however this is more tentative. Fewer cells in cluster 1 expressed key marker genes however many still expressed the FCGR3A gene which is a major gene in monocyte labelling, allowing the tentative link to be made between monocytes and cluster 1.
+### Cluster 2
+Cluster 2 was strongly labelled as B cells. It's most expressed gene amonsgt the cell population was IGHD which is a apart of the marker gene dictionary for B cells, it also has high levels of expression within most its cells of the other key marker genes for B cells.
+### Cluster 3
+Cluster 3 is labelled as T cells tentatively. All of the marker genes for T cells show high mean expression within the cluster, however none of the 5 mostly expressed genes in the cluster are in the marker gene dictionary for T cells hence why a tentative link can be made.
+### Cluster 4
+Cluster 4 is even more tentatively labelled as T cells. For similar reasons to cluster 3 however some of the marker genes for T cells show slightly lower mean gene expression than in cluster 3.
+### Cluster 5
+Cluster 5 is labelled as B cells. There is very high (top 5 expressed genes) expression of CD79A/B within cluster 5 which are both key marker genes of B cells which allows for confident labelling. However, there is little IGHD expression within cluster 5 however this may just be because cluster 5 is a different subtype of B cells which don't largely express this gene.
+### Cluster 6
+Cluster 6 is labelled as CD8/NK cells. This is tentative as only 3 of the 5 key marker genes show high mean expression amonsgt cells of this cluster.
+### Cluster 7
+Cluster 7 is very confidentally labelled as pDC cells as all 3 key marker genes have very high mean gene expression throughout the cluster.
 
+## Tools used
+- Python
+- Scanpy
+- AnnData
+- NumPy
+- pandas
+- SciPy
+- matplotlib
+- Jupyter Notebook
+
+## Future Improvements
+- Expand the marker gene dictionary
+- Incorporat P values to decide how tentative the labelling of a cluster is
+- Apply the workflow to a larger dataset
+- Compare different Leiden resolutions
+- Analysing differences between drugged and non-drugged samples
